@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    background-image: url(https://www.rasilva-advogados.com.br/wp-content/uploads/2020/08/cimento-argamassa-pa-de-pedreiro-construcao-obra-material-de-construcao-construcao-civil-empreiteira-1470679212546_1920x1080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.579);
+    color: white;
+    font-size: 40px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+form{
+    margin-left:40px;
+    margin-right:40px;
+    font-family: 'Poppins', sans-serif;
+}

@@ -15,19 +15,19 @@
         }
 
         public static function conectar(){
-            if($this->conectado == NULL){
+            if(self::$conectado == NULL){
                 try{
-                    $this->$conectado = new \PDO("mysql:host=" . $this->$bdHost . ";dbname=" . $this->$bdNome, $this->$bdUsuario, $this->$bdSenha);
+                    self::$conectado = new \PDO("mysql:host=" . self::$bdHost . ";dbname=" . self::$bdNome, self::$bdUsuario, self::$bdSenha);
                 }
                 catch(\PDOException $exception){
                     die("Não foi possível concetar com Banco de Dados devido ao erro: " . $exception->getMessage());
                 }
             }
-            return conectado;
+            return self::$conectado;
         }
 
         public static function desconectar(){
-            $this->conectado = NULL;
+            self::$conectado = NULL;
         }
     }
 ?>
