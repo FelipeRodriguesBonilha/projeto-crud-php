@@ -1,10 +1,20 @@
+<?php
+    use BLL\BllEmpreiteira;
+    include_once '../../BLL/bllempreiteira.php';
+
+    $id = $_GET['id'];
+
+    $bll = new  \BLL\BllEmpreiteira();
+    $empreiteira = $bll->selectID($id);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalhes Empreiteira</title>
 
     <link rel="stylesheet" href="styleempreiteira.css">
 
@@ -22,26 +32,16 @@
 <body>
     <div class="container">
         <div class="fundo">
-            <form action="recinserirempreiteira.php" method="POST" id="forminserirempreiteira" class="col s12">
-                <p>Inserir Empreiteira</p>
-                <div class="input-field col s6">
-                    <input placeholder="Digite o nome da empreiteira" id="nome" type="text" name="txtNome">
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Digite o endereço da empreiteira" id="first_name" type="text" name="txtEndereco">
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Digite o telefone da empreiteira" id="first_name" type="text" name="txtTelefone">
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Digite o cnpj da empreiteira" id="first_name" type="text" name="txtCnpj">
-                </div>
+            <form class="col s12">
+                <p>Detalhes Empreiteira</p>
+                <h5><?php echo "ID: {$empreiteira->getIdEmpreiteira()}"; ?></h5>
+                <h5><?php echo "Nome: {$empreiteira->getNomeEmpreiteira()}"; ?></h5>
+                <h5><?php echo "Endereço: {$empreiteira->getEnderecoEmpreiteira()}"; ?></h5>
+                <h5><?php echo "Telefone: {$empreiteira->getTelefoneEmpreiteira()}"; ?></h5>
+                <h5><?php echo "Cnpj: {$empreiteira->getCnpjEmpreiteira()}"; ?></h5>
                 <div class="botoes">
-                    <button class="waves-effect waves-light btn black" type="submit">
-                        Gravar
-                    </button>
-                    <button class="waves-effect waves-light btn black" type="reset">
-                        Limpar
+                    <button class="waves-effect waves-light btn black" type="button" onclick="JavaScript:location.href='editarempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
+                        Editar
                     </button>
                     <button class="waves-effect waves-light btn black" type="button" onclick="JavaScript:location.href='listarempreiteira.php'">
                         Voltar

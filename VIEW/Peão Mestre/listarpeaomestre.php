@@ -15,15 +15,13 @@
     , initial-scale=1.0">
     <title>Listar Empreiteiras</title>
 
-    <link rel="stylesheet" href="listarempreiteira.css">
+    <link rel="stylesheet" href="listar.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
@@ -36,8 +34,8 @@
             <th>TELEFONE</th>
             <th>CNPJ</th>
             <th>
-                <button class="waves-effect waves-light btn green" type="submit" onclick="JavaScript:location.href='inserirempreiteira.php'">
-                    <i class="material-icons">add</i>
+                <button class="waves-effect waves-light btn black" type="submit" onclick="JavaScript:location.href='inserirempreiteira.php'">
+                    Inserir
                 </button>
             </th>
         </tr>
@@ -51,14 +49,14 @@
             <td><?php echo $empreiteira->getTelefoneEmpreiteira(); ?></td>
             <td><?php echo $empreiteira->getCnpjEmpreiteira(); ?></td>
             <td>
-                <button class="waves-effect waves-light btn blue" type="submit" onclick="JavaScript:location.href='detalhesempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
-                    <i class="material-icons">assignment</i>
+                <button class="waves-effect waves-light btn black" type="submit" onclick="JavaScript:location.href='detalhesempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
+                    Detalhes
                 </button>
-                <button class="waves-effect waves-light btn orange" onclick="JavaScript:location.href='editarempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
-                    <i class="material-icons">edit</i>
+                <button class="waves-effect waves-light btn black" onclick="JavaScript:location.href='editarempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
+                    Editar
                 </button>
-                <button class="waves-effect waves-light btn red" type="submit" onclick="JavaScript:remover(<?php echo $empreiteira->getIdEmpreiteira(); ?>, '<?php echo $empreiteira->getNomeEmpreiteira(); ?>');">
-                    <i class="material-icons">delete</i>
+                <button class="waves-effect waves-light btn black" type="submit" onclick="JavaScript:remover(<?php echo $empreiteira->getIdEmpreiteira(); ?>, '<?php echo $empreiteira->getNomeEmpreiteira(); ?>');">
+                    Excluir
                 </button>
             </td>
         </tr>
