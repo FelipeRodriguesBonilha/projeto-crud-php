@@ -19,6 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,400&display=swap" rel="stylesheet">
         
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!-- Inclusão do Plugin jQuery Validation-->
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+
+    <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -26,7 +32,7 @@
             <form action="recinserirpeao.php" method="POST" id="forminserirpeao" class="col s12">
                 <p>Inserir Peao</p>
                 <div class="input-field col s6">
-                    <input placeholder="Digite o nome do peão" id="nome" type="text" name="txtNome">
+                    <input placeholder="Digite o nome do peão" id="nome" type="text" name="txtNome" required minlength="2">
                 </div>
                 <div class="botoes">
                     <button class="waves-effect waves-light btn green" type="submit">
@@ -42,5 +48,6 @@
             </form>
         </div>
     </div>
+    <script src="validacaopeao.js"></script>
 </body>
 </html>
