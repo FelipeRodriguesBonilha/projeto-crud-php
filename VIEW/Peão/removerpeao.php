@@ -1,10 +1,10 @@
 <?php
-    include_once '../../BLL/bllempreiteira.php';
+    include_once '../../BLL/bllpeao.php';
 
     $id = $_GET['id'];
 
-    $bll = new \BLL\BllEmpreiteira();
+    $bll = new \BLL\BllPeao();
     $bll->delete($id);
    
-    header("location: listarempreiteira.php");
+    header("location: listarpeao.php");
 ?>

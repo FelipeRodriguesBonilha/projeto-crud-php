@@ -1,7 +1,10 @@
 <?php
     namespace BLL; 
     use DAL\DalObra;
+    use BLL\PeaoMestre;
     include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\DAL\dalobra.php';
+    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\BLL\bllpeaomestre.php';
+    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\MODEL\peaomestre.php';
     
     class BllObra{
         public function select(){
@@ -20,7 +23,16 @@
         }
 
         public function insert(\MODEL\Obra $obra){
-            $dal = new \DAL\DalObra(); 
+
+            $bllPeaoMestre = new \BLL\BllPeaoMestre(); 
+            $peaomestre = new \MODEL\PeaoMestre();
+            $peaomestre = $bllPeaoMestre->selectID($obra->getIdPeaoMestreObra());
+
+            $novoValor = $peaomestre->getQuantidadePeaoMestre() + 1;
+            $peaomestre->setQuantidadePeaoMestre($novoValor);
+            $bllPeaoMestre->update($peaomestre);
+
+            $dal = new \DAL\DalObra();
             $dal->insert($obra);
         }
         
@@ -29,8 +41,8 @@
             $dal->update($obra);
         }
  
-         public function delete(int $id){
-            $dal = new \DAL\DalObra(); 
+        public function delete(int $id){
+            $dal = new \DAL\DalObra();
             $dal->delete($id);
         }
     }

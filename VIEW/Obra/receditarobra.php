@@ -6,12 +6,12 @@
    
     if(isset($_POST['txtID']) || isset($_POST['txtDescricao']) || isset($_POST['txtIdEmpreiteira']) || isset($_POST['txtIdPeao']) || isset($_POST['txtIdPeaoMestre']) || isset($_POST['txtValorHora']) || isset($_POST['txtEstado'])){
         $obra->setIdObra($_POST['txtID']);
-        $obra->setNomeEmpreiteira($_POST['txtDescricao']);
+        $obra->setDescricaoObra($_POST['txtDescricao']);
         $obra->setIdEmpreiteiraObra($_POST['txtIdEmpreiteira']);
         $obra->setIdPeaoObra($_POST['txtIdPeao']);
-        $obra->setIdPeaoMestre($_POST['txtIdPeaoMestre']);
-        $obra->setValorHora($_POST['txtValorHora']);
-        $obra->setEstado($_POST['txtEstado']);
+        $obra->setIdPeaoMestreObra($_POST['txtIdPeaoMestre']);
+        $obra->setValorHoraObra($_POST['txtValorHora']);
+        $obra->setEstadoObra($_POST['txtEstado']);
     }
 
     $bll = new \BLL\BllObra();

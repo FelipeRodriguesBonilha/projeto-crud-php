@@ -6,7 +6,7 @@
 
     $obra = new \MODEL\Obra(); 
     
-    if(isset($_POST['txtID']) || isset($_POST['txtDescricao']) || isset($_POST['txtIdEmpreiteira']) || isset($_POST['txtIdPeao']) || isset($_POST['txtIdPeaoMestre']) || isset($_POST['txtValorHora']) || isset($_POST['txtEstado'])){
+    if(isset($_POST['txtDescricao']) || isset($_POST['txtIdEmpreiteira']) || isset($_POST['txtIdPeao']) || isset($_POST['txtIdPeaoMestre']) || isset($_POST['txtValorHora']) || isset($_POST['txtEstado'])){
         $obra->setDescricaoObra($_POST['txtDescricao']);
         $obra->setIdEmpreiteiraObra($_POST['txtIdEmpreiteira']);
         $obra->setIdPeaoObra($_POST['txtIdPeao']);

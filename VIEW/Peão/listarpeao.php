@@ -1,9 +1,9 @@
 <?php
-    use BLL\BllEmpreiteira;
-    include_once '../../BLL/bllempreiteira.php';
+    use BLL\BllPeao;
+    include_once '../../BLL/bllpeao.php';
     
-    $bll = new \BLL\BllEmpreiteira();
-    $listaEmpreiteira = $bll->select();
+    $bll = new \BLL\BllPeao();
+    $listaPeao = $bll->select();
 ?>
 
 <!DOCTYPE html>
@@ -13,9 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <title>Listar Empreiteiras</title>
+    <title>Listar Peões</title>
 
-    <link rel="stylesheet" href="listar.css">
+    <link rel="stylesheet" href="listarpeao.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -23,40 +23,36 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<h1>Listar Empreiteiras</h1>
+<?php include_once '../../menu.php';?>
+<h1>Listar Peões</h1>
     <table>
         <tr>
             <th>ID</th>
             <th>NOME</th>
-            <th>ENDEREÇO</th>
-            <th>TELEFONE</th>
-            <th>CNPJ</th>
             <th>
-                <button class="waves-effect waves-light btn black" type="submit" onclick="JavaScript:location.href='inserirempreiteira.php'">
-                    Inserir
+                <button class="waves-effect waves-light btn green" type="submit" onclick="JavaScript:location.href='inserirpeao.php'">
+                    <i class="material-icons">add</i>
                 </button>
             </th>
         </tr>
         <?php
-            foreach($listaEmpreiteira as $empreiteira) {
+            foreach($listaPeao as $peao) {
         ?>
         <tr>
-            <td><?php echo $empreiteira->getIdEmpreiteira(); ?></td>
-            <td><?php echo $empreiteira->getNomeEmpreiteira(); ?></td>
-            <td><?php echo $empreiteira->getEnderecoEmpreiteira(); ?></td>
-            <td><?php echo $empreiteira->getTelefoneEmpreiteira(); ?></td>
-            <td><?php echo $empreiteira->getCnpjEmpreiteira(); ?></td>
+            <td><?php echo $peao->getIdPeao(); ?></td>
+            <td><?php echo $peao->getNomePeao(); ?></td>
             <td>
-                <button class="waves-effect waves-light btn black" type="submit" onclick="JavaScript:location.href='detalhesempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
-                    Detalhes
+                <button class="waves-effect waves-light btn blue" type="submit" onclick="JavaScript:location.href='detalhespeao.php?id=' + <?php echo $peao->getIdPeao(); ?>">
+                    <i class="material-icons">assignment</i>
                 </button>
-                <button class="waves-effect waves-light btn black" onclick="JavaScript:location.href='editarempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
-                    Editar
+                <button class="waves-effect waves-light btn orange" onclick="JavaScript:location.href='editarpeao.php?id=' + <?php echo $peao->getIdPeao(); ?>">
+                    <i class="material-icons">edit</i>
                 </button>
-                <button class="waves-effect waves-light btn black" type="submit" onclick="JavaScript:remover(<?php echo $empreiteira->getIdEmpreiteira(); ?>, '<?php echo $empreiteira->getNomeEmpreiteira(); ?>');">
-                    Excluir
+                <button class="waves-effect waves-light btn red" type="submit" onclick="JavaScript:remover(<?php echo $peao->getIdPeao(); ?>, '<?php echo $peao->getNomePeao(); ?>');">
+                    <i class="material-icons">delete</i>
                 </button>
             </td>
         </tr>
@@ -69,8 +65,8 @@
 
 <script>
     function remover(id, nome) {
-        if (confirm('Excluir a Empreiteira ' + nome + ' com ID = ' + id + '?')) {
-            location.href = 'removerempreiteira.php?id=' + id;
+        if (confirm('Excluir o Peão ' + nome + ' com ID = ' + id + '?')) {
+            location.href = 'removerpeao.php?id=' + id;
         }
     }
 </script>

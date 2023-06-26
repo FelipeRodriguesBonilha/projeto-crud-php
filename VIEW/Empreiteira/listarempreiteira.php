@@ -27,7 +27,9 @@
 
 </head>
 <body>
-<h1>Listar Empreiteiras</h1>
+    <?php include_once '../../menu.php';?>
+    <h1>Listar Empreiteiras</h1>
+    
     <table>
         <tr>
             <th>ID</th>

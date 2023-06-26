@@ -4,7 +4,7 @@
     use MODEL\Empreiteira;
     
     include_once 'conexao.php';
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\MODEL\Empreiteira.php';
+    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\MODEL\empreiteira.php';
 
     class DalEmpreiteira{
         public function select(){
@@ -56,7 +56,7 @@
             foreach($tabela as $registro){
                 $empreiteira = new \MODEL\Empreiteira();
         
-                $oempreiteira->setIdEmpreiteira($registro['id']);
+                $empreiteira->setIdEmpreiteira($registro['id']);
                 $empreiteira->setNomeEmpreiteira($registro['nome']);
                 $empreiteira->setEnderecoEmpreiteira($registro['endereco']);
                 $empreiteira->setTelefoneEmpreiteira($registro['telefone']);

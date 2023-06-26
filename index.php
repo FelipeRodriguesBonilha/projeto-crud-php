@@ -15,18 +15,18 @@
 
 <div class="background">
     <div class="nav-esq">
-        <p>Crud PHP</p>
+        <p>Crud PHP - Obras</p>
     </div>
     <div class="nav-dir">
         <button onclick="JavaScript:location.href='login.php'">Login</button>
-        <button onclick="JavaScript:location.href='listarempreiteira.php'">Cadastro</button> 
+        <button onclick="JavaScript:location.href='cadastro.php'">Cadastro</button> 
     </div>
 </div>
 
 <div class="corpo">
-    <h1>Trabalho da discplina de Linguagem de Programação</h1>
+    <h1>Trabalho da disciplina de Linguagem de Programação</h1>
     <p>O trabalho consiste em fazer um CRUD em PHP para manipular um banco de dados MySql</p>
-    <button onclick="JavaScript:location.href='listarempreiteira.php'">Conferir</button>
+    <button onclick="JavaScript:location.href='conferir.php'">Conferir</button>
 </div>
 
 </body>

@@ -5,7 +5,7 @@ namespace MODEL;
         private ?int $id; 
         private ?string $usuario; 
         private ?string $senha;
-        private ?string $email; 
+        private ?string $email;
         
         public function __construct(){}
 

@@ -4,10 +4,13 @@
 
 html, body{
     height: 100%;
-    background-image: url(https://multiteiner.com.br/content/uploads/2020/07/Capa-do-artigo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background:
+    radial-gradient(ellipse at 20% 20%, #35234b 0%, transparent 70%),
+    radial-gradient(ellipse at 60% 20%, #2975bf 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 20%, #3d54b1 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 100%, #9f3c54 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 100%, #362d6f 0%, transparent 70%);
+    background-blend-mode: screen;
 }
 
 .container{

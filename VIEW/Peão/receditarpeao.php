@@ -1,17 +1,14 @@
 <?php
-    include_once '../../MODEL/Empreiteira.php';
-    include_once '../../BLL/BllEmpreiteira.php';
+    include_once '../../MODEL/Peao.php';
+    include_once '../../BLL/BllPeao.php';
 
-    $empreiteira = new \MODEL\Empreiteira(); 
+    $peao = new \MODEL\Peao(); 
    
-    $empreiteira->setIdEmpreiteira($_POST['txtID']);
-    $empreiteira->setNomeEmpreiteira($_POST['txtNome']);
-    $empreiteira->setEnderecoEmpreiteira($_POST['txtEndereco']);
-    $empreiteira->setTelefoneEmpreiteira($_POST['txtTelefone']);
-    $empreiteira->setCnpjEmpreiteira($_POST['txtCnpj']);
+    $peao->setIdPeao($_POST['txtID']);
+    $peao->setNomePeao($_POST['txtNome']);
 
-    $bll = new \BLL\BllEmpreiteira();
-    $bll->update($empreiteira);
+    $bll = new \BLL\BllPeao();
+    $bll->update($peao);
    
-    header("location: listarempreiteira.php");
+    header("location: listarpeao.php");
 ?>

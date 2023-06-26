@@ -28,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,400&display=swap" rel="stylesheet">
              
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -40,11 +41,11 @@
                 <h5><?php echo "Telefone: {$empreiteira->getTelefoneEmpreiteira()}"; ?></h5>
                 <h5><?php echo "Cnpj: {$empreiteira->getCnpjEmpreiteira()}"; ?></h5>
                 <div class="botoes">
-                    <button class="waves-effect waves-light btn black" type="button" onclick="JavaScript:location.href='editarempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
-                        Editar
+                    <button class="waves-effect waves-light btn orange" type="button" onclick="JavaScript:location.href='editarempreiteira.php?id=' + <?php echo $empreiteira->getIdEmpreiteira(); ?>">
+                        <i class="material-icons">edit</i>
                     </button>
-                    <button class="waves-effect waves-light btn black" type="button" onclick="JavaScript:location.href='listarempreiteira.php'">
-                        Voltar
+                    <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='listarempreiteira.php'">
+                        <i class="material-icons">arrow_back</i>
                     </button>
                 </div>
             </form>

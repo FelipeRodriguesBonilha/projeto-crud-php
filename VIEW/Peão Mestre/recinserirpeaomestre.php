@@ -1,19 +1,17 @@
 <?php
-    use BLL\BllEmpreiteira;
-    use MODEL\Empreiteira;
-    include_once '../../MODEL/empreiteira.php';
-    include_once '../../BLL/bllempreiteira.php';
+    use BLL\BllPeaoMestre;
+    use MODEL\PeaoMestre;
+    include_once '../../MODEL/peaomestre.php';
+    include_once '../../BLL/bllpeaomestre.php';
 
-    $empreiteira = new \MODEL\Empreiteira(); 
+    $peaomestre = new \MODEL\PeaoMestre(); 
     
-    if(isset($_POST['txtNome']) || isset($_POST['txtEndereco']) || isset($_POST['txtTelefone']) || isset($_POST['txtCnpj'])){
-        $empreiteira->setNomeEmpreiteira($_POST['txtNome']);
-        $empreiteira->setEnderecoEmpreiteira($_POST['txtEndereco']);
-        $empreiteira->setTelefoneEmpreiteira($_POST['txtTelefone']);
-        $empreiteira->setCnpjEmpreiteira($_POST['txtCnpj']);
-        $bll = new \BLL\BllEmpreiteira(); 
-        $bll->insert($empreiteira); 
+    if(isset($_POST['txtNome'])){
+        $peaomestre->setNomePeaoMestre($_POST['txtNome']);
+        $peaomestre->setQuantidadePeaoMestre(0);
+        $bll = new \BLL\BllPeaoMestre();
+        $bll->insert($peaomestre);
     }
 
-    header("location: listarempreiteira.php");
+    header("location: listarpeaomestre.php");
 ?>

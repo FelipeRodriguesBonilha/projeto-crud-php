@@ -54,7 +54,6 @@
                 $con = Conexao::desconectar();
 
                 $obra->setNomePeaoMestreObra($registroPeaoMestre['nome']);
-
                 $obra->setValorHoraObra($registro['valorhora']); 
                 $obra->setEstadoObra($registro['estado']);
 

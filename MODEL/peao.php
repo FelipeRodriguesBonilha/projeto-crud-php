@@ -11,6 +11,6 @@
         public function getNomePeao(){return $this->nome;}
 
         public function setIdPeao(int $id){$this->id = $id;}
-        public function setNomePeao(int $nome){$this->nome = $nome;}
+        public function setNomePeao(string $nome){$this->nome = $nome;}
     }
 ?>

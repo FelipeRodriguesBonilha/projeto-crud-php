@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<?php include_once '../../menu.php';?>
 <h1>Listar Obras</h1>
     <table>
         <tr>
@@ -51,7 +52,7 @@
             <td><?php echo $obra->getNomeEmpreiteiraObra(); ?></td>
             <td><?php echo $obra->getNomePeaoObra(); ?></td>
             <td><?php echo $obra->getNomePeaoMestreObra(); ?></td>
-            <td><?php echo $obra->getValorHoraObra(); ?></td>
+            <td><?php echo "R$" . number_format($obra->getValorHoraObra(), 2, ",", "."); ?></td>
             <td><?php echo $obra->getEstadoObra(); ?></td>
             <td>
                 <button class="waves-effect waves-light btn blue" type="submit" onclick="JavaScript:location.href='detalhesobra.php?id=' + <?php echo $obra->getIdObra(); ?>">

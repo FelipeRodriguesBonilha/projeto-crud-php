@@ -22,17 +22,20 @@
 <body>
     <div class="container">
         <div class="fundo">
-            <form action="logicalogin.php" method="POST" id="formloginusuario" class="col s12">
-                <p>Logar Usuário</p>
+            <form action="recinserirusuario.php" method="POST" id="forminserirusuario" class="col s12">
+                <p>Cadastrar Usuário</p>
                 <div class="input-field col s6">
-                    <input placeholder="Digite o usuario" id="user" type="text" name="usuario" class="validate">
+                    <input placeholder="Digite o usuario" id="nome" type="text" name="txtUsuario">
                 </div>
                 <div class="input-field col s6">
-                    <input placeholder="Digite a senha" id="password" type="text" name="senha" class="validate">
+                    <input placeholder="Digite a senha" id="first_name" type="text" name="txtSenha">
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Digite o e-mail" id="first_name" type="text" name="txtEmail">
                 </div>
                 <div class="botoes">
                     <button class="waves-effect waves-light btn green" type="submit">
-                        Logar
+                        Cadastrar
                     </button>
                     <button class="waves-effect waves-light btn orange" type="reset">
                         Limpar
@@ -41,7 +44,7 @@
                         Voltar
                     </button>
                 </div>
-                <h5><a href="cadastro.php">Cadastrar-se</a></h5>
+                <h5><a href="login.php">Logar-se</a></h5>
             </form>
         </div>
     </div>

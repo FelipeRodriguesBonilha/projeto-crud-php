@@ -8,5 +8,10 @@
             $dal = new \Dal\DalUsuario(); 
             return $dal->selectUser($usuario);
         }
+
+        public function insertUser(\MODEL\Usuario $cadastro){
+            $dal = new \DAL\DalUsuario(); 
+            $dal->insertUser($cadastro);
+        }
     }
 ?>
