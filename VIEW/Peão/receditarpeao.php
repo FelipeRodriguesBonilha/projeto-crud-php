@@ -1,6 +1,6 @@
 <?php
-    include_once '../../MODEL/Peao.php';
-    include_once '../../BLL/BllPeao.php';
+    include_once '../../MODEL/peao.php';
+    include_once '../../BLL/bllpeao.php';
 
     $peao = new \MODEL\Peao(); 
    
