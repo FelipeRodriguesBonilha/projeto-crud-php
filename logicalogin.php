@@ -1,6 +1,6 @@
 <?php
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\BLL\bllusuario.php';
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\MODEL\usuario.php';
+    include_once '/var/www/html/TrabalhoPHP2BCCT2/BLL/bllusuario.php';
+    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/usuario.php';
 
     $usuario = trim($_POST['usuario']);
     $senha = trim($_POST['senha']);

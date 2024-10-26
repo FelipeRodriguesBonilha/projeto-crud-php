@@ -4,7 +4,7 @@
     use MODEL\Empreiteira;
     
     include_once 'conexao.php';
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\MODEL\empreiteira.php';
+    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/empreiteira.php';
 
     class DalEmpreiteira{
         public function select(){

@@ -1,7 +1,7 @@
 <?php
     namespace BLL; 
     use DAL\DalPeao;
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\DAL\dalpeao.php';
+    include_once '/var/www/html/TrabalhoPHP2BCCT2/DAL/dalpeao.php';
     
     class BllPeao{
         public function select(){

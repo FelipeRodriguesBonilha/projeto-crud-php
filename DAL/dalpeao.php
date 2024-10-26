@@ -4,7 +4,7 @@
     use MODEL\Peao;
     
     include_once 'conexao.php';
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\MODEL\peao.php';
+    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/peao.php';
 
     class DalPeao{
         public function select(){

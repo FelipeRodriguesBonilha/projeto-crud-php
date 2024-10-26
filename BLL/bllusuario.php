@@ -1,7 +1,7 @@
 <?php
     namespace BLL; 
     use DAL\DalUsuario; 
-    include_once 'C:\xampp\htdocs\TrabalhoPHP2BCCT2\DAL\dalusuario.php';
+    include_once '/var/www/html/TrabalhoPHP2BCCT2/DAL/dalusuario.php';
     
     class BllUsuario{
         public function selectUser(string $usuario){
