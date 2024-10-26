@@ -4,7 +4,7 @@
     use MODEL\PeaoMestre;
     
     include_once 'conexao.php';
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/peaomestre.php';
+    include_once '/var/www/html/projeto-crud-php/MODEL/peaomestre.php';
 
     class DalPeaoMestre{
         public function select(){

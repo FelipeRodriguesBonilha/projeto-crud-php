@@ -4,7 +4,7 @@
     use MODEL\Obra;
     
     include_once 'conexao.php';
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/Obra.php';
+    include_once '/var/www/html/projeto-crud-php/MODEL/Obra.php';
 
     class DalObra{
         public function select(){

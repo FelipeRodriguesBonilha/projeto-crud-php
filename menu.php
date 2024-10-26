@@ -26,11 +26,11 @@
     <nav>
         <div class="nav-wrapper black">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="\TrabalhoPHP2BCCT2\VIEW\Empreiteira\listarempreiteira.php">Empreiteira</a></li>
-                <li><a href="\TrabalhoPHP2BCCT2\VIEW\Peão\listarpeao.php">Peão</a></li>
-                <li><a href="\TrabalhoPHP2BCCT2\VIEW\Peão Mestre\listarpeaomestre.php">Peão Mestre</a></li>
-                <li><a href="\TrabalhoPHP2BCCT2\VIEW\Obra\listarobra.php">Obra</a></li>
-                <li><a href="\TrabalhoPHP2BCCT2\logout.php">Logout</a></li>
+                <li><a href="\projeto-crud-php\VIEW\Empreiteira\listarempreiteira.php">Empreiteira</a></li>
+                <li><a href="\projeto-crud-php\VIEW\Peão\listarpeao.php">Peão</a></li>
+                <li><a href="\projeto-crud-php\VIEW\Peão Mestre\listarpeaomestre.php">Peão Mestre</a></li>
+                <li><a href="\projeto-crud-php\VIEW\Obra\listarobra.php">Obra</a></li>
+                <li><a href="\projeto-crud-php\logout.php">Logout</a></li>
             </ul>
         </div>
     </nav>

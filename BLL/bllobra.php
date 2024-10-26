@@ -2,9 +2,9 @@
     namespace BLL; 
     use DAL\DalObra;
     use BLL\PeaoMestre;
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/DAL/dalobra.php';
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/BLL/bllpeaomestre.php';
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/peaomestre.php';
+    include_once '/var/www/html/projeto-crud-php/DAL/dalobra.php';
+    include_once '/var/www/html/projeto-crud-php/BLL/bllpeaomestre.php';
+    include_once '/var/www/html/projeto-crud-php/MODEL/peaomestre.php';
     
     class BllObra{
         public function select(){

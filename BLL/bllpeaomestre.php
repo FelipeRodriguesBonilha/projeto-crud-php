@@ -1,7 +1,7 @@
 <?php
     namespace BLL; 
     use DAL\DalPeaoMestre;
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/DAL/dalpeaomestre.php';
+    include_once '/var/www/html/projeto-crud-php/DAL/dalpeaomestre.php';
     
     class BllPeaoMestre{
         public function select(){

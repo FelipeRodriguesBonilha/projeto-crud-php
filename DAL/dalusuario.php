@@ -2,8 +2,8 @@
 
 namespace DAL;
 
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/DAL/conexao.php';
-    include_once '/var/www/html/TrabalhoPHP2BCCT2/MODEL/Usuario.php';
+    include_once '/var/www/html/projeto-crud-php/DAL/conexao.php';
+    include_once '/var/www/html/projeto-crud-php/MODEL/Usuario.php';
 
 
     class DalUsuario{
